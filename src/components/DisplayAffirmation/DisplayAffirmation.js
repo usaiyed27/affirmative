@@ -1,9 +1,10 @@
 import React from 'react';
 
-function DisplayAffirmation(){
+function DisplayAffirmation({showAffirmation}){
 	return(
 		<div className = 'display-affirmation'>
-			<h2>Your Affirmations</h2>
+			<h2>Affirmations to change mindset</h2>
+			<p></p>
 		</div>
 	)
 }
