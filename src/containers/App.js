@@ -6,6 +6,8 @@ import ListAffirmation from '../components/ListAffirmation/ListAffirmation';
 import './App.css';
 
 class App extends Component {
+	_isMounted = false;
+
 	constructor() {
 		super()
 		this.state = {
@@ -45,14 +47,32 @@ class App extends Component {
 		}
 	}
 
-    // showAffirmation = () => {
-    // 	for(let i = 0; i< this.state.listAffirm.length; i++){
-    // 		return this.state.listAffirm[i];
-    // 	}
-    // }
+	onClickDelete = (index) => {
+		const { listAffirm } = this.state;
+
+		this.setState({
+			listAffirm: listAffirm.filter((affirm, i) => {
+				return i != index;
+			})
+		})
+	}
+
+   componentDidMount(){
+   	  let index = 0;
+
+   	  this.timer = setInterval(() => {
+   	  	this.setState({ displayAffirm: this.state.listAffirm[index]});
+   	  		index = (index + 1)%(this.state.listAffirm.length)
+   	  		//console.log(index)
+   	  	},2000)
+   }
+
+  	componentWillUnmount(){
+  		clearInterval(this.timer);
+  	}
 
 	render(){
-		const {listAffirm} = this.state;
+		const {displayAffirm, listAffirm} = this.state;
 		return (
 		    <div className="App">
 		      <Navigation onRouteChange = {this.onRouteChange}/>
@@ -65,11 +85,12 @@ class App extends Component {
 			    :(this.state.route === 'list') 
 			      ?<ListAffirmation 
 			      onRouteChange = {this.onRouteChange} 
+			      onClickDelete = {this.onClickDelete}
 			      listAffirm = {listAffirm}
 			      />
 			      :<DisplayAffirmation 
 			       onRouteChange = {this.onRouteChange} 
-			       listAffirm = {listAffirm}
+			       displayAffirm = {displayAffirm}
 			       />
 		      }
 		    </div>
