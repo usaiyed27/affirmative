@@ -14,6 +14,7 @@ class App extends Component {
 				'Hello',
 				'Your Affirmations'
 			],
+			displayAffirm: '',
 			route: 'home'
 		}
 	}
@@ -44,12 +45,11 @@ class App extends Component {
 		}
 	}
 
-    showAffirmation = () => {
-    	let affirm = this.state.displayAffirm.map(item => {
-    		return item;
-    	})
-    	setInterval(function(affirm) { return affirm }, 2000)
-    }
+    // showAffirmation = () => {
+    // 	for(let i = 0; i< this.state.listAffirm.length; i++){
+    // 		return this.state.listAffirm[i];
+    // 	}
+    // }
 
 	render(){
 		const {listAffirm} = this.state;
@@ -68,8 +68,9 @@ class App extends Component {
 			      listAffirm = {listAffirm}
 			      />
 			      :<DisplayAffirmation 
-			      	onRouteChange = {this.onRouteChange} 
-			      	showAffirmation = {this.showAffirmation}/>
+			       onRouteChange = {this.onRouteChange} 
+			       listAffirm = {listAffirm}
+			       />
 		      }
 		    </div>
   		);
