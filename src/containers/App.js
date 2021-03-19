@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Navigation from '../components/Navigation/Navigation'
+import Navigation from '../components/Navigation/Navigation';
+import AppTitle from '../components/AppTitle/AppTitle';
 import AddAffirmatiion from '../components/AddAffirmation/AddAffirmation';
 import DisplayAffirmation from '../components/DisplayAffirmation/DisplayAffirmation';
 import ListAffirmation from '../components/ListAffirmation/ListAffirmation';
@@ -64,7 +65,7 @@ class App extends Component {
    	  	this.setState({ displayAffirm: this.state.listAffirm[index]});
    	  		index = (index + 1)%(this.state.listAffirm.length)
    	  		//console.log(index)
-   	  	},2000)
+   	  	},5000)
    }
 
   	componentWillUnmount(){
@@ -76,6 +77,7 @@ class App extends Component {
 		return (
 		    <div className="App">
 		      <Navigation onRouteChange = {this.onRouteChange}/>
+		      <AppTitle />
 		      { (this.state.route === 'home')
 			    ?<AddAffirmatiion 
 			      onRouteChange = {this.onRouteChange}

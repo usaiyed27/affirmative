@@ -1,4 +1,5 @@
 import React from 'react';
+import './DisplayAffirmation.css'
 
 function DisplayAffirmation({displayAffirm}){
 	return(
@@ -8,8 +9,7 @@ function DisplayAffirmation({displayAffirm}){
 		  		<div className="pa3 bt b--black-10">
 		    		<p 
 		    		className="f6 f5-ns lh-copy" 
-		    		id = 'affirmations' 
-		    		style = {{'textTransform':'uppercase', 'fontWeight':'bold', 'color':'#231F20'}}>
+		    		id = 'affirmations'>
 		     			{displayAffirm}
 		    		</p>
 		  		</div>
