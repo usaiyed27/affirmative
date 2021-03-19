@@ -1,0 +1,14 @@
+nav {
+	display: flex;
+    height: 45px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+nav p{
+	padding: 0 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}

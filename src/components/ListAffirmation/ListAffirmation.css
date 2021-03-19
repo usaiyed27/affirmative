@@ -1,0 +1,26 @@
+table{
+	position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%
+}
+
+tr{
+	margin-bottom: 10px;
+}
+td{
+	width: 80%;
+}
+
+#text{
+	background-color: #fff;
+	text-transform: capitalize;
+	font-size: 20px;
+	padding: 0 15px;
+	font-weight: 600;
+	margin-right: 15px;
+}
+
+td button {
+	margin-left: 15px;
+}

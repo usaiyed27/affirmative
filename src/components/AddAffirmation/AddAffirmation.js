@@ -3,7 +3,7 @@ import './AddAffirmation.css'
 
 function AddAffirmation({onInputChange,onInputSubmit,input}){
 	return(
-	<div className = "affirmation">
+	<div className = "container affirmation">
 		<input type='text' placeholder= 'Add Your Affirmation' onChange = {onInputChange}/>
 		<button 
 		type='submit'

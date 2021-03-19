@@ -1,4 +1,17 @@
 .affirmation{
-	display: flex;
-	justify-content: center;
+	
+}
+
+input, button{
+	padding: 10px 55px;
+	border: none;
+}
+
+input{
+	width: 80%;
+}
+
+button{
+	background-color: #231F20;
+	color: #fff;
 }
