@@ -15,10 +15,10 @@ class App extends Component {
 			input: '',
 			listAffirm: [
 				'Hello',
-				'Your Affirmations'
 			],
 			displayAffirm: '',
-			route: 'home'
+			route: 'home',
+			bgColor: ''
 		}
 	}
 
@@ -58,6 +58,21 @@ class App extends Component {
 		})
 	}
 
+	changeColor = () => {
+		let index = 0;
+
+		this.setState(state => {
+			const bgColorsArray = ['#231F20', '#BB4430'];
+			const bgColor = bgColorsArray[index];
+			console.log(bgColor)
+			index = (index + 1)%(bgColorsArray.length);
+			return{
+				bgColor
+			}	
+		})
+	}	
+
+
    componentDidMount(){
    	  let index = 0;
 
@@ -73,7 +88,7 @@ class App extends Component {
   	}
 
 	render(){
-		const {displayAffirm, listAffirm} = this.state;
+		const {displayAffirm, listAffirm,bgColor} = this.state;
 		return (
 		    <div className="App">
 		      <Navigation onRouteChange = {this.onRouteChange}/>
@@ -83,11 +98,13 @@ class App extends Component {
 			      onRouteChange = {this.onRouteChange}
 			      onInputSubmit = {this.onInputSubmit}
 			      onInputChange = {this.onInputChange} 
+			      changeColor = {this.changeColor}
 			      />
 			    :(this.state.route === 'list') 
 			      ?<ListAffirmation 
 			      onRouteChange = {this.onRouteChange} 
 			      onClickDelete = {this.onClickDelete}
+			      bgColor = {bgColor}
 			      listAffirm = {listAffirm}
 			      />
 			      :<DisplayAffirmation 

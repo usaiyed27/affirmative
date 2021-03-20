@@ -1,14 +1,13 @@
-.affirmation{
-	
-}
+
 
 input, button{
-	padding: 10px 55px;
+	padding: 20px 42px;
 	border: none;
 }
 
 input{
 	width: 80%;
+	background-color: #EFE6DD;
 }
 
 button{

@@ -1,11 +1,11 @@
 import React from 'react';
 import './ListAffirmation.css'
 
-function ListAffirmation({listAffirm, onClickDelete}){
+function ListAffirmation({listAffirm, onClickDelete, bgColor}){
 	const rows = listAffirm.map((row, index) => {
 		return(
 		 <tr key = {index}>
-			<td id="text">{row}</td>
+			<td id="text"  style = {{'backgroundColor': bgColor}}>{row}</td>
 			<td>
 				<button onClick = {() => onClickDelete(index)}>
 				Delete

@@ -1,13 +1,13 @@
 nav {
 	display: flex;
-    height: 105px;
+    height: 70px;
     width: 100%;
     justify-content: flex-end;
+    background-color: #231f20;
 }
 
 nav p{
 	padding: 10px 20px;
-    font-weight: 600;
     text-transform: uppercase;
     color: #fff;
     cursor: pointer;
@@ -15,10 +15,9 @@ nav p{
 }
 
 #AppTitle span{
-	text-transform: uppercase;
-	font-size: 55px;
-	margin-bottom: 15px;
-	position: absolute;
-	left: 35px;
-	top: 0%;
+    text-transform: uppercase;
+    font-size: 50px;
+    position: absolute;
+    left: 35px;
+    top: 1%;
 }
