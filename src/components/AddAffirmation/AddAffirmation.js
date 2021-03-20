@@ -1,13 +1,13 @@
 import React from 'react';
 import './AddAffirmation.css' 
 
-function AddAffirmation({onInputChange,onInputSubmit,input, changeColor}){
+function AddAffirmation({onInputChange,onInputSubmit,input}){
 	return(
 	<div className = "container affirmation">
 		<input type='text' placeholder= 'Add Your Affirmation' onChange = {onInputChange}/>
 		<button 
 		type='submit'
-		onClick = {() => {onInputSubmit(input); changeColor();}}>
+		onClick = {() => {onInputSubmit(input);}}>
 		Add Affirmation
 		</button>
 	</div>

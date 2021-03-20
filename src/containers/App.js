@@ -18,7 +18,7 @@ class App extends Component {
 			],
 			displayAffirm: '',
 			route: 'home',
-			bgColor: ''
+			bgColor: '#231F20'
 		}
 	}
 
@@ -59,16 +59,22 @@ class App extends Component {
 	}
 
 	changeColor = () => {
-		let index = 0;
+		let currentValue = this.state.bgColor;
+		let bgColor, index;
+		console.log(currentValue)
 
 		this.setState(state => {
-			const bgColorsArray = ['#231F20', '#BB4430'];
-			const bgColor = bgColorsArray[index];
-			console.log(bgColor)
-			index = (index + 1)%(bgColorsArray.length);
-			return{
+			const bgColorsArray = ['#231F20', '#BB4430', '#5236D2'];
+			if(bgColor !== currentValue){
+				index = bgColorsArray.indexOf(currentValue) + 1;
+				bgColor = bgColorsArray[index]
+			}
+			//const bgColor = bgColorsArray[index];
+			// console.log(bgColor)
+			// index = (index + 1)%(bgColorsArray.length);
+			 return{
 				bgColor
-			}	
+		     }	
 		})
 	}	
 
@@ -106,6 +112,7 @@ class App extends Component {
 			      onClickDelete = {this.onClickDelete}
 			      bgColor = {bgColor}
 			      listAffirm = {listAffirm}
+			      changeColor = {this.changeColor}
 			      />
 			      :<DisplayAffirmation 
 			       onRouteChange = {this.onRouteChange} 
