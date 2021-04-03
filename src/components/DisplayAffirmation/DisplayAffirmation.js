@@ -1,7 +1,7 @@
 import React from 'react';
 import './DisplayAffirmation.css'
 
-function DisplayAffirmation({displayAffirm, bgColor, changeColor}){
+function DisplayAffirmation({displayAffirm}){
 	return(
 		<div className = 'container'>
 			
@@ -12,9 +12,7 @@ function DisplayAffirmation({displayAffirm, bgColor, changeColor}){
 			  <div className="pa3 bt b--black-10">
 			    <p 
 			    className="f6 f5-ns lh-copy measure" 
-			    id = 'affirmations'  
-			    onLoad = {() => changeColor()} 
-			    style = {{'backgroundColor': bgColor}}>
+			    id = 'affirmations'>
 				    {displayAffirm}
 			    </p>
 			  </div>
