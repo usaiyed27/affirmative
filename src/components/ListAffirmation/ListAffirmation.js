@@ -4,7 +4,7 @@ import './ListAffirmation.css'
 function ListAffirmation({listAffirm, onClickDelete, bgColor, changeColor}){
 	const rows = listAffirm.map((row, index) => {
 		return(
-		 <tr key = {index} onLoad = {() => changeColor}>
+		 <tr key = {index}>
 			<td id="text"  style = {{'backgroundColor': bgColor}}>{row}</td>
 			<td>
 				<button onClick = {() => onClickDelete(index)}>

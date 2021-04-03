@@ -7,7 +7,6 @@ import ListAffirmation from '../components/ListAffirmation/ListAffirmation';
 import './App.css';
 
 class App extends Component {
-	_isMounted = false;
 
 	constructor() {
 		super()
