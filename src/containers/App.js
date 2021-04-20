@@ -17,7 +17,7 @@ class App extends Component {
 			],
 			displayAffirm: '',
 			route: 'home',
-			bgColor: '#231F20'
+			bgColor: '#BB4430'
 		}
 	}
 
@@ -63,7 +63,7 @@ class App extends Component {
 		console.log(currentValue)
 
 		this.setState(state => {
-			const bgColorsArray = ['#231F20', '#BB4430', '#5236D2'];
+			const bgColorsArray = ['#BB4430'];
 			if(bgColor !== currentValue){
 				index = bgColorsArray.indexOf(currentValue) + 1;
 				bgColor = bgColorsArray[index]

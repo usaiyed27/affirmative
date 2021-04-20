@@ -12,7 +12,7 @@ function DisplayAffirmation({displayAffirm}){
 			  <div className="pa3 bt b--black-10">
 			    <p 
 			    className="f6 f5-ns lh-copy measure" 
-			    id = 'affirmations'>
+			    id = 'affirmations'>	
 				    {displayAffirm}
 			    </p>
 			  </div>
