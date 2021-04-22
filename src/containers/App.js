@@ -63,9 +63,9 @@ class App extends Component {
 		console.log(currentValue)
 
 		this.setState(state => {
-			const bgColorsArray = ['#BB4430'];
+			const bgColorsArray = ['#BB4430', '#5236D2'];
 			if(bgColor !== currentValue){
-				index = bgColorsArray.indexOf(currentValue) + 1;
+				index = (bgColorsArray.indexOf(currentValue) + 1)%(bgColorsArray.length);
 				bgColor = bgColorsArray[index]
 			}
 			//const bgColor = bgColorsArray[index];
