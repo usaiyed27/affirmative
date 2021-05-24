@@ -2,7 +2,7 @@ body{
  /* background: rgb(34,193,195);
   background: linear-gradient(0deg, rgba(34,193,195,1) 19%, rgba(253,187,45,1) 60%);*/
   cursor: pointer;
-  background: url('./dot-pattern.jpg') no-repeat;
+  /*background: url('./dot-pattern.jpg') no-repeat;*/
   background-size: cover;
   /*background: #7EBDC2;
 	//background: linear-gradient(0deg, rgba(34,193,195,1) 19%, rgba(243,45,253,1) 60%);
